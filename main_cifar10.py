@@ -225,7 +225,7 @@ def validate(args, val_loader, model, criterion, epoch):
     recall_meter = utils.AverageMeter()
     f1_meter = utils.AverageMeter()
 
-    # switch to evaluate mode
+    # switch to evaluate mode ->
     model = flopscounter.add_flops_counting_methods(model)
     model.eval().start_flops_count()
     model.reset_flops_count()
